@@ -3,41 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cloudflare Website</title>
+    <title>My Cloudflare Site</title>
+    <meta name="description" content="A website deployed on Cloudflare Pages">
     <style>
+        /* CSS STYLES */
+        :root {
+            --primary: #F48120; /* Cloudflare Orange */
+            --dark: #24292f;
+            --light: #f6f8fa;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
         }
+
+        /* Navbar */
+        nav {
+            background-color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
         .container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1rem;
             background: white;
-            padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 2rem;
         }
-        h1 { color: #333; }
-        .status {
+
+        h1 {
+            color: var(--dark);
+            margin-top: 0;
+        }
+
+        .badge {
             display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #2ecc71;
+            background-color: #e3fcef;
+            color: #2f855a;
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #586069;
+        }
+
+        .link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary);
             color: white;
-            border-radius: 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .link:hover {
+            background-color: #d8710e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #8c959f;
             font-size: 0.9rem;
-            margin-top: 1rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Website Live!</h1>
-        <p>Your site is successfully deployed on Cloudflare Pages.</p>
-        <div class="status">● Online</div>
-    </div>
+    <nav>
+        <a href="#" class="logo">CloudflareSite</a>
+    </nav>
+
+    <main class="container">
+        <span class="badge">● Live on Cloudflare</span>
+        <h1>Welcome to Your New Site</h1>
+        <p>This website is hosted on Cloudflare Pages. It is fast, secure, and globally distributed.</p>
+        <p>Simply connect this file to GitHub, and Cloudflare will handle the rest.</p>
+        <a href="https://pages.cloudflare.com" target="_blank" class="link">Learn More</a>
+    </main>
+
+    <footer>
+        &copy; 2026 Your Company Name. Powered by Cloudflare.
+    </footer>
 </body>
 </html>
